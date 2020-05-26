@@ -1,8 +1,7 @@
-from pyramid import scale_pyramid
+from .pyramid import scale_pyramid
 import argparse #this library to build command line interfaces
 import cv2      #to import images and read them
 
-# Pyramid code 
 """-------------------------------------------------load the image--------------------------------------------------"""
 image_path = ('ME.jpg')
 image = cv2.imread(image_path)

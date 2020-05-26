@@ -1,6 +1,5 @@
-from ImagePyramid.pyramid import scale_pyramid
+from pyramid import scale_pyramid
 from SlidingWindow import Sliding_Window
-import argparse
 import time
 import cv2
 
@@ -29,12 +28,14 @@ for (pyramid_level, scaled_image) in enumerate(scale_pyramid(image, scale=1.5)):
         """
         if boundary_box.shape[0] != winH or boundary_box.shape[1] != winW:
             continue
-
+        
+        #-----------------------------------------------------------------------------
         """
         this area where you can process your boundary box,
         applying ML classifier to classify the contents of your box
         """
         # for now, we do not have a classifier, we'll just draw the window
+        #------------------------------------------------------------------------------
         """-------------------------------------------Draw The Window------------------------------------------------"""
 
         """
