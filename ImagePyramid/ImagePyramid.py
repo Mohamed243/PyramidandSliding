@@ -1,4 +1,4 @@
-from .pyramid import scale_pyramid
+from pyramid import scale_pyramid
 import argparse #this library to build command line interfaces
 import cv2      #to import images and read them
 
@@ -31,9 +31,10 @@ for (pyramid_level, resized) in enumerate(scale_pyramid(image, scale=1.5)):
     If 0 is passed, it waits indefinitely for a key stroke.
     """
     cv2.waitKey(0)
+    # Press any key to move to next pyramid level
 """----------------------------------------------close all windows-----------------------------------------------"""
 """
-program waits for any key press in specified milliseconds in cv2.waitKey() function above
+program waits for any key press specified milliseconds in cv2.waitKey() function above
 If you press any key in that time, the program continues to this line and close all windows  
 cv2.destroyAllWindows(): simply destroys all the windows we created
 """
